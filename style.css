@@ -12,3 +12,9 @@
         font-size: 1.25rem;
     }
 }
+.text-indent {
+    text-indent: 2rem;
+}
+.scrollbar {
+    color: #6a0dad;
+}
