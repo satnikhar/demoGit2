@@ -13,11 +13,18 @@
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <title>Web1</title>
 </head>
 
 <body>
+
   <!-----Search Navbar-->
   <div class="container-fluid ">
     <div class="row justify-content-center mt-2 mb-4  ">
@@ -25,8 +32,9 @@
         <nav class="navbar navbar-light bg-success ">
           <div class="container-fluid align-items-center text-center d-flex justify-content-center">
             <form class="d-flex align-self-center">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-warning" type="submit">Search</button>
+              <input class="form-control me-2 " type="search" writingsuggestions="true" id="input-box" 
+                autocomplete="on" placeholder="Search......" aria-label="Search">
+              <button class="btn btn-outline-warning" type="submit" id="searchButton">Search</button>
             </form>
           </div>
         </nav>
@@ -54,14 +62,58 @@
                   <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      District Court
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item bg-warning text-white" href="#civil">Civil</a></li>
+                      <li><a class="dropdown-item" href="#criminal">Criminal</a></li>
+                      <li><a class="dropdown-item bg-success text-white" href="#Cooperative">Cooperative Hosing
+                          Society</a></li>
+                      <li><a class="dropdown-item" href="#family">Family Matters</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      High Court Case
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#original">Original Side</a></li>
+                      <li><a class="dropdown-item bg-info text-white" href="#appellate"> Appellate Side</a></li>
+
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      Industrail & Labour
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#labour">Labour Court</a></li>
+                      <li><a class="dropdown-item bg-info text-white" href="#labour">Industrial Court</a></li>
+
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      Tribunals
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item bg-warning text-white" href="#consumer">Consumer Forum</a></li>
+                      <li><a class="dropdown-item" href="#commercial">Commercial</a></li>
+                      <li><a class="dropdown-item bg-success text-white" href="#other">Arbitration</a></li>
+                      <li><a class="dropdown-item" href="#other">other Tribunals</a></li>
+                    </ul>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="#contact">Online Consultancy</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                    <a class="nav-link " aria-current="page" href="#contact">Contact us</a>
                   </li>
                 </ul>
               </div>
@@ -127,7 +179,9 @@
             </div>
             <div class="col-md-8">
               <div class="card-body ">
-                <h5 class="card-title text-success d-flex  p-1 fs-6 lh-base fst-italic text-justify text-indent fw-bold ">We are
+                <h5
+                  class="card-title text-success d-flex  p-1 fs-6 lh-base fst-italic text-justify text-indent fw-bold ">
+                  We are
                   a team of
                   experienced Advocates and provide litigation services before Honorable Court & Tribunals. We also
                   provide consultancy services with neutral mindset to assist you, step next. <br>
@@ -161,7 +215,8 @@
         <div class="card shadow mb-2 bg-body rounded" style="width: 22rem;">
           <img src="images/Complex-City.jpg" class="card-img-top" alt="..." style="height: 18vh;">
           <div class="card-body ">
-            <h5 class="card-title text-center fs-6 text-success fw-bold text-decoration-underline ">Civil Matters</h5>
+            <h5 class="card-title text-center fs-6 text-success fw-bold text-decoration-underline " id="civil">Civil
+              Matters</h5>
             <p class="card-text text-justify fs-6 text-indent overflow-auto  "
               style="height: 25vh; scrollbar-color: rgb(209, 209, 241) rgb(240, 245, 240);">Civil matters are
               non-criminal disputes that fall into various categories,
@@ -180,7 +235,8 @@
         <div class="card shadow mb-2 bg-body rounded" style="width: 22rem;">
           <img src="images/court_numble_3.jpg" class="card-img-top" alt="..." style="height: 18vh">
           <div class="card-body">
-            <h5 class="card-title text-center fs-6 text-success fw-bold">Criminal Matters</h5>
+            <h5 class="card-title text-center fs-6 text-success fw-bold text-decoration-underline " id="criminal">
+              Criminal Matters</h5>
             <p class="card-text text-justify fs-6 text-indent overflow-auto "
               style="height: 25vh; scrollbar-color: rgb(209, 209, 241) rgb(240, 245, 240);">Criminal matters are legal
               cases involving actions considered offenses against society,
@@ -220,11 +276,12 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center align-items-center text-center my-2">
+      <div class="col-lg-4 col-md-6 col-sm-12 order-md-1 d-flex justify-content-center align-items-center text-center my-2">
         <div class="card shadow mb-2 bg-body rounded" style="width: 22rem;">
           <img src="images/family.jpg" class="card-img-top" alt="..." style="height: 18vh">
           <div class="card-body">
-            <h5 class="card-title text-center fs-6 text-success fw-bold">Family Matters</h5>
+            <h5 class="card-title text-center fs-6 text-success fw-bold text-decoration-underline " id="family">Family
+              Matters</h5>
             <p class="card-text text-justify fs-6 text-indent overflow-auto "
               style="height: 25vh; scrollbar-color: rgb(209, 209, 241) rgb(240, 245, 240);">"Family matters" refers to
               legal issues like marriage, divorce, child
@@ -266,11 +323,12 @@
   <div class="container">
     <div class="row">
       <div
-        class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center align-items-center text-center my-2 position-relative">
+        class="col-lg-4 col-md-auto col-sm-12 order-md-2 d-flex justify-content-center align-items-center text-center my-2 position-relative">
         <div class="card shadow mb-2 bg-body rounded" style="width: 22rem;">
           <img src="images/cooperation.jpg" class="card-img-top" alt="..." style="height: 18vh;">
           <div class="card-body">
-            <h5 class="card-title text-center fs-6 text-success fw-bold">Cooperative Society Matters</h5>
+            <h5 class="card-title text-center fs-6 text-success fw-bold text-decoration-underline" id="Cooperative">
+              Cooperative Society Matters</h5>
             <p class="card-text text-justify fs-6 text-indent overflow-auto  "
               style="height: 25vh; scrollbar-color: rgb(209, 209, 241) rgb(240, 245, 240);">Cooperative housing society
               matters encompass collective management and
@@ -321,7 +379,8 @@
         <div class="card shadow mb-2 bg-body rounded" style="width: 22rem;">
           <img src="images/Industry.jpg" class="card-img-top" alt="..." style="height: 18vh">
           <div class="card-body">
-            <h5 class="card-title text-center fs-6 text-success fw-bold">Labour & Industrial Court</h5>
+            <h5 class="card-title text-center fs-6 text-success fw-bold text-decoration-underline" id="labour">Labour &
+              Industrial Court</h5>
             <p class="card-text text-justify fs-6 text-indent overflow-auto "
               style="height: 25vh; scrollbar-color: rgb(209, 209, 241) rgb(240, 245, 240);">
               Labour law in India is a comprehensive system covering wages, working conditions,
@@ -372,7 +431,8 @@
         <div class="card shadow mb-2 bg-body rounded" style="width: 22rem;">
           <img src="images/consPro.jpg" class="card-img-top" alt="..." style="height: 18vh">
           <div class="card-body">
-            <h5 class="card-title text-center fs-6 text-success fw-bold">Consumer Court</h5>
+            <h5 class="card-title text-center fs-6 text-success fw-bold text-decoration-underline" id="consumer">
+              Consumer Court</h5>
             <p class="card-text text-justify fs-6 text-indent overflow-auto "
               style="height: 25vh; scrollbar-color: rgb(209, 209, 241) rgb(240, 245, 240);">Consumer courts in India are
               a three-tier quasi-judicial system designed to resolve
@@ -420,7 +480,8 @@
         <div class="card shadow mb-2 bg-body rounded" style="width: 22rem;">
           <img src="images/intl.jpg" class="card-img-top" alt="..." style="height: 18vh;">
           <div class="card-body">
-            <h5 class="card-title text-center fs-6 text-success fw-bold">Intelectual Property Act (IPR)</h5>
+            <h5 class="card-title text-center fs-6 text-success fw-bold text-decoration-underline" id="ipr">Intelectual
+              Property Act (IPR)</h5>
             <p class="card-text text-justify fs-6 text-indent overflow-auto  "
               style="height: 25vh; scrollbar-color: rgb(209, 209, 241) rgb(240, 245, 240);"> Intellectual property (IP)
               is a legal concept which refers to creations of the mind for
@@ -449,7 +510,8 @@
         <div class="card shadow mb-2 bg-body rounded" style="width: 22rem;">
           <img src="images/Commercial2.jpg" class="card-img-top" alt="..." style="height: 18vh">
           <div class="card-body ">
-            <h5 class="card-title text-center fs-6 text-success fw-bold ">Commercial matters</h5>
+            <h5 class="card-title text-center fs-6 text-success fw-bold text-decoration-underline" id="commercial">
+              Commercial matters</h5>
             <p class="card-text text-justify fs-6 text-indent overflow-auto "
               style="height: 25vh; scrollbar-color: rgb(209, 209, 241) rgb(240, 245, 240);">
               The National Company Law Tribunal (NCLT) is a quasi-judicial body in India that
@@ -470,7 +532,7 @@
               Ordering investigations into a company's affairs and freezing its assets if necessary.
               Approving the conversion of a public limited company into a private limited company.
               Winding up and dissolution of companies.
-              </p>
+            </p>
             <a href="#" class="btn btn-primary">know more</a>
           </div>
         </div>
@@ -479,10 +541,11 @@
         <div class="card shadow mb-2 bg-body rounded" style="width: 22rem;">
           <img src="images/business_Court.jpg" class="card-img-top" alt="..." style="height: 18vh">
           <div class="card-body">
-            <h5 class="card-title text-center fs-6 text-success fw-bold">Other Services</h5>
+            <h5 class="card-title text-center fs-6 text-success fw-bold text-decoration-underline" id="other">Other
+              Services</h5>
             <p class="card-text text-justify fs-6 text-indent overflow-auto "
-              style="height: 25vh; scrollbar-color: rgb(209, 209, 241) rgb(240, 245, 240);"> 
-              Our other services include property transfer through Sale, Gift deed and WILL registration.
+              style="height: 25vh; scrollbar-color: rgb(209, 209, 241) rgb(240, 245, 240);">
+              Our other services include property transfer through Sale, Gift deed, Power of Attorney and WILL registration within Mumbai region only.
               Domicile certificate and e-Gazette services. Consultancy over Income Tax and investment in Govt's tax
               exempted schemes and Bonds. We also provide consultancy over investments in Stock market and real estate
               projects.</p>
@@ -493,76 +556,127 @@
       </div>
     </div>
   </div>
+
+  <div class="container my-2">
+    <div class="row align-items-center justify-content-center text-center my-2 position-relative">
+      <div class="col-lg-12 col-md-12 col-sm-12 ">
+
+        <p id="original">
+          <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
+            aria-expanded="false" aria-controls="multiCollapseExample1">High Court Original Side matters</a>
+
+          <button class="btn btn-success mx-3" type="button" data-bs-toggle="collapse"
+            data-bs-target="#multiCollapseExample2" aria-expanded="false"
+            aria-controls="multiCollapseExample2" id="appellate"> High Court Appellate Side matters</button>
+          
+        </p >
+        <div class="row align-items-center justify-content-center text-center my-2 position-relative">
+          <div class="col-lg-6 col-md-12 col-sm-12 ">
+            <div class="collapse multi-collapse" id="multiCollapseExample1">
+              <div class="card card-body mx-3" style="height: 25vh;">
+                <p class="card-text text-justify fs-6 text-indent overflow-auto">
+                  The Bombay High Court's Original Side functions as a court of first instance for high-value civil suits, testamentary, admiralty, and company matters arising within Mumbai. It operates separately from the Appellate Side, with specialized rules, often handling complex commercial or testamentary cases directly.
+                </p>
+                <a href="#" class="btn btn-success d-block w-25 d-flex justify-content-center align-self-center my-2" id="highcourtButton">know more</a>
+               
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-12 col-sm-12 ">
+            <div class="collapse multi-collapse" id="multiCollapseExample2">
+              <div class="card card-body" style="height: 25vh;">
+                <p class="card-text text-justify fs-6 text-indent overflow-auto">The Appellate Side of the Bombay High Court handles appeals, revisions, and writ petitions against lower court judgments, covering both civil and criminal matters throughout Maharashtra (and Goa/UTs). It operates at the main bench (Bombay) and branches in Nagpur, Aurangabad, and Kolhapur, handling cases related to district court decisions, property, and constitutional matters.The Bombay High Court Appellate Side Rules, 1960 regulate the hearing of these cases by Division or Single Benches.
+
+
+                </p>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <!---Contact Us-->
-<div class="container">
+  <div class="container">
     <div class="row  my-2 d-flex text-center justify-content-center position-relative">
       <div class="col-12">
-        <span class="fs-5 fw-bold text-center text-success text-decoration-underline "><i>Contact </i></span>
+        <span class="fs-5 fw-bold text-center text-success text-decoration-underline " id="contact"><i>Contact
+          </i></span>
         <span class="fs-5 fw-bold text-center text-warning text-decoration-underline "><i>Us</i></span>
       </div>
     </div>
   </div>
 
   <!---Contact Us content Line-1-->
-  
+
   <div class="container">
     <div class="row">
       <div
         class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center align-items-center text-center my-1 position-relative">
         <div class="card shadow mb-2 bg-body rounded" style="width: 22rem;">
-          
+
           <div class="card-body">
-            <h5 class="card-title text-center fs-6 text-success fw-bold">Navi Mumbai Office:</h5>
+            <h5 class="card-title text-center fs-6 text-success fw-bold ">Navi Mumbai office</h5>
             <p class="card-text text-justify fs-6 text-indent overflow-auto  ">
-               <br><b>Address:</b><br>
-            Shop No. 1, Dnyan Muktai,<br>
-            Plot No. 19, Sector 13, <br>
-            Kharghar, Navi Mumbai <br>
-            Maharashtra - 410210
+              <br><b>Address:</b><br>
+              Shop No. 1, Dnyan Muktai,<br>
+              Plot No. 19, Sector 13, <br>
+              Kharghar, Navi Mumbai <br>
+              Maharashtra - 410210
             </p>
             <h5 class="card-title text-start fs-6 text-success fw-bold">For Online Consultancy</h5>
-            
-            <a href="#" class="btn btn-primary"><span class="text-light">Rs. 2000/- </span><span class="text-white"><form>
-            <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_RXdKRXJsIa7atC"
-              async> </script>
-          </form></span></a>
+
+            <a href="#" class="btn btn-primary"><span class="text-light">Rs. 2000/- </span><span class="text-white">
+                <form>
+                  <script src="https://checkout.razorpay.com/v1/payment-button.js"
+                    data-payment_button_id="pl_RXdKRXJsIa7atC" async> </script>
+                </form>
+              </span></a>
           </div>
         </div>
 
       </div>
-      <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center align-items-center text-center my-1 position-relative">
+      <div
+        class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center align-items-center text-center my-1 position-relative">
         <div class="card shadow mb-2 bg-body rounded" style="width: 22rem;">
-          
+
           <div class="card-body">
-            <h5 class="card-title text-center fs-6 text-success fw-bold">Nagpur Office:</h5>
+            <h5 class="card-title text-center fs-6 text-success fw-bold ">Nagpur Office:</h5>
             <p class="card-text text-justify fs-6 text-indent overflow-auto ">
-             <br> <b>Address</b><br>
-            Shop No. 2, Ram Apartment,<br>
-            Tiranga Chowk, Ganesh Nagar, <br>
-            Nr. Sangam Cinema <br>
-            Maharashtra - 440024 </p>
+              <br> <b>Address</b><br>
+              Shop No. 2, Ram Apartment,<br>
+              Tiranga Chowk, Ganesh Nagar, <br>
+              Nr. Sangam Cinema <br>
+              Maharashtra - 440024
+            </p>
             <h5 class="card-title text-start fs-6 text-success fw-bold">For Online Consultancy</h5>
-            
-            <a href="#" class="btn btn-primary"><span class="text-light">Rs. 2000/- </span><span class="text-white"><form>
-            <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_RXdKRXJsIa7atC"
-              async> </script>
-          </form></span></a>
+
+            <a href="#" class="btn btn-primary"><span class="text-light">Rs. 2000/- </span><span class="text-white">
+                <form>
+                  <script src="https://checkout.razorpay.com/v1/payment-button.js"
+                    data-payment_button_id="pl_RXdKRXJsIa7atC" async> </script>
+                </form>
+              </span></a>
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center align-items-center text-center  position-relative">
+      <div
+        class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center align-items-center text-center  position-relative">
         <div class="card shadow mb-2 bg-body rounded" style="width: 22rem;">
           <div class="card-body">
             <h5 class="card-title text-center fs-6 text-success fw-bold"> Navi Mumbai Office direction:</h5>
             <p><iframe
-            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d15085.583746734783!2d73.07594429999999!3d19.0463218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sin!4v1761206243717!5m2!1sen!2sin"
-            width="300px" height="220px" style="border:0;" allowfullscreen="" loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade" class="p-2"></iframe></p>
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d15085.583746734783!2d73.07594429999999!3d19.0463218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sin!4v1761206243717!5m2!1sen!2sin"
+                width="300px" height="220px" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" class="p-2"></iframe></p>
             <h6 class="text-success fs-6 text-start fw-bold">Website visit count:</h6>
-                
-            
+
+
           </div>
-          
+
         </div>
 
       </div>
@@ -571,17 +685,29 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-12 bg-warning" style="height: 10vh;">
-        
+
       </div>
     </div>
   </div>
+
 
 
   <!-- Option 1: Bootstrap Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
     crossorigin="anonymous"></script>
+  <script>
 
+    $("#searchButton").click(function () {
+      alert("You may contact through Consultancy Services");
+
+    });
+    $("#highcourtButton").click(function () {
+      alert("You may contact through Consultancy Services");
+
+    });
+
+  </script>
 
 </body>
 
