@@ -19,8 +19,9 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
     integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
     crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    
 
-  <title>Web1</title>
+  <title>Elite Advocacy</title>
 </head>
 
 <body>
@@ -32,9 +33,10 @@
         <nav class="navbar navbar-light bg-success ">
           <div class="container-fluid align-items-center text-center d-flex justify-content-center">
             <form class="d-flex align-self-center">
-              <input class="form-control me-2 " type="search" writingsuggestions="true" id="input-box" 
-                autocomplete="on" placeholder="Search......" aria-label="Search">
+              <input class="form-control me-2 " type="search" writingsuggestions="true" 
+                autocomplete="on" placeholder="Search......" aria-label="Search" id="input-box" >
               <button class="btn btn-outline-warning" type="submit" id="searchButton">Search</button>
+              <div class="result-box"></div>
             </form>
           </div>
         </nav>
@@ -180,7 +182,7 @@
             <div class="col-md-8">
               <div class="card-body ">
                 <h5
-                  class="card-title text-success d-flex  p-1 fs-6 lh-base fst-italic text-justify text-indent fw-bold ">
+                  class="card-title text-success d-flex  p-1 fs-6 lh-base fst-italic text-justify text-indent fw-bold overflow-auto " style="height: 25vh; scrollbar-color: rgb(209, 209, 241) rgb(240, 245, 240); ">
                   We are
                   a team of
                   experienced Advocates and provide litigation services before Honorable Court & Tribunals. We also
@@ -209,7 +211,7 @@
   </div>
   <!---Practice area content Line-1-->
   <div class="container">
-    <div class="row">
+    <div class="row ">
       <div
         class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center align-items-center text-center my-2 position-relative">
         <div class="card shadow mb-2 bg-body rounded" style="width: 22rem;">
@@ -225,8 +227,11 @@
               wrongs). These are governed by the Code of Civil Procedure, 1908 (CPC), which outlines the procedural
               framework for filing suits and conducting civil proceedings. A civil court has the authority to hear these
               cases unless a specific law prohibits it, and the goal is to resolve the dispute through a court order or
-              decree.</p>
+              decree. Civil matters includes: Regular Civil Suit for property claim , Right and money claim ,Miscellaneous application like: Heirship and Succession Certificate ,Death Declaration ,Partnership in property and business,Specific performanace over agreement and Codicils like Letter of Administration, Probate etc.
+            </p>
+
             <a href="#contact" class="btn btn-warning">know more</a>
+            
           </div>
         </div>
 
@@ -277,7 +282,7 @@
         </div>
       </div>
       <div class="col-lg-4 col-md-6 col-sm-12 order-md-1 d-flex justify-content-center align-items-center text-center my-2">
-        <div class="card shadow mb-2 bg-body rounded" style="width: 22rem;">
+        <div class="card shadow mb-2 bg-body rounded" style="width: 22rem;" id="familyCard">
           <img src="images/family.jpg" class="card-img-top" alt="..." style="height: 18vh">
           <div class="card-body">
             <h5 class="card-title text-center fs-6 text-success fw-bold text-decoration-underline " id="family">Family
@@ -323,7 +328,7 @@
   <div class="container">
     <div class="row">
       <div
-        class="col-lg-4 col-md-auto col-sm-12 order-md-2 d-flex justify-content-center align-items-center text-center my-2 position-relative">
+        class="col-lg-4 col-md-6 col-sm-12 order-md-2 d-flex justify-content-center align-items-center text-center my-2 position-relative">
         <div class="card shadow mb-2 bg-body rounded" style="width: 22rem;">
           <img src="images/cooperation.jpg" class="card-img-top" alt="..." style="height: 18vh;">
           <div class="card-body">
@@ -562,10 +567,10 @@
       <div class="col-lg-12 col-md-12 col-sm-12 ">
 
         <p id="original">
-          <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
+          <a class="btn btn-info mt-2" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button"
             aria-expanded="false" aria-controls="multiCollapseExample1">High Court Original Side matters</a>
 
-          <button class="btn btn-success mx-3" type="button" data-bs-toggle="collapse"
+          <button class="btn btn-success mx-3 mt-2" type="button" data-bs-toggle="collapse"
             data-bs-target="#multiCollapseExample2" aria-expanded="false"
             aria-controls="multiCollapseExample2" id="appellate"> High Court Appellate Side matters</button>
           
@@ -575,7 +580,7 @@
             <div class="collapse multi-collapse" id="multiCollapseExample1">
               <div class="card card-body mx-3" style="height: 25vh;">
                 <p class="card-text text-justify fs-6 text-indent overflow-auto">
-                  The Bombay High Court's Original Side functions as a court of first instance for high-value civil suits, testamentary, admiralty, and company matters arising within Mumbai. It operates separately from the Appellate Side, with specialized rules, often handling complex commercial or testamentary cases directly.
+                  The Bombay High Court's Original Side functions as a court of first instance for high-value civil suits, testamentary, admiralty, and company matters arising within Mumbai and its jurisdictional area. It operates separately from the Appellate Side, with specialized rules, often handling complex commercial or testamentary cases directly.
                 </p>
                 <a href="#" class="btn btn-success d-block w-25 d-flex justify-content-center align-self-center my-2" id="highcourtButton">know more</a>
                
@@ -672,7 +677,10 @@
                 src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d15085.583746734783!2d73.07594429999999!3d19.0463218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sin!4v1761206243717!5m2!1sen!2sin"
                 width="300px" height="220px" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade" class="p-2"></iframe></p>
-            <h6 class="text-success fs-6 text-start fw-bold">Website visit count:</h6>
+            
+             
+
+           
 
 
           </div>
@@ -685,6 +693,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-12 bg-warning" style="height: 10vh;">
+        
 
       </div>
     </div>
@@ -699,15 +708,18 @@
   <script>
 
     $("#searchButton").click(function () {
-      alert("You may contact through Consultancy Services");
+      alert("You may need to contact through Consultancy Services");
 
     });
     $("#highcourtButton").click(function () {
-      alert("You may contact through Consultancy Services");
+      alert("You may need to contact through Consultancy Services");
 
     });
 
   </script>
+  
+  
+ 
 
 </body>
 

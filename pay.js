@@ -1,6 +1,6 @@
-const availableKeywords = [
+let availableKeywords = [
     'NDPS', 
-    ' PMLA', 
+    'PMLA', 
     'Trust and Property Registration',
      'where', 
     'where can I contact you', 
@@ -50,4 +50,5 @@ function selectInput(list){
     inputBox.value = list.innerHTML;
     resultsBox.innerHTML = "";
 }
+
 

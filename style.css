@@ -15,6 +15,12 @@
 .text-indent {
     text-indent: 2rem;
 }
-.scrollbar {
-    color: #6a0dad;
+
+@media onScreen (max-width:991px ) and (min-width: 771px){
+    #family{
+        display: flex;
+          
+          display: none;
+    }
+    
 }
