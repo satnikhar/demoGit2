@@ -16,11 +16,35 @@
     text-indent: 2rem;
 }
 
-@media onScreen (max-width:991px ) and (min-width: 771px){
-    #family{
+@media  (max-width:991px ) and (min-width: 771px){
+    #coopCard {
         display: flex;
-          
-          display: none;
-    }
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        transform: translate(360px, -810px );
+       
+      }
+      #othersCard {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        width:100%;
+       
+      }
+      #mapCard {
+        display: flex;
+        position: absolute;
+        flex-direction: column;
+        align-items: center;
+        transform: translate(360px, -870px );
+        height: 25vh;
+       
+      }
+      iframe {
+        height: 190px;
+      
+        }
     
-}
+    }

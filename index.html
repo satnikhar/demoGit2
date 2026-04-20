@@ -324,10 +324,10 @@
   </div>
   <!---Practice area content Line-2-->
   <div class="container">
-    <div class="row">
+    <div class="row ">
       <div
         class="col-lg-4 col-md-6 col-sm-12 order-md-2 d-flex justify-content-center align-items-center text-center my-2 position-relative">
-        <div class="card shadow mb-2 bg-body rounded" style="width: 22rem;">
+        <div class="card shadow mb-2 bg-body rounded" style="width: 22rem;" id="coopCard">
           <img src="images/cooperation.jpg" class="card-img-top" alt="..." style="height: 18vh;">
           <div class="card-body">
             <h5 class="card-title text-center fs-6 text-success fw-bold text-decoration-underline" id="Cooperative">
@@ -573,7 +573,7 @@
         <div class="row align-items-center justify-content-center text-center my-2 position-relative">
           <div class="col-lg-6 col-md-12 col-sm-12 ">
             <div class="collapse multi-collapse" id="multiCollapseExample1">
-              <div class="card card-body mx-3" style="height: 25vh;">
+              <div class="card card-body mx-3" style="height: 25vh; ">
                 <p class="card-text text-justify fs-6 text-indent overflow-auto">
                   The Bombay High Court's Original Side functions as a court of first instance for high-value civil suits, testamentary, admiralty, and company matters arising within Mumbai and its jurisdictional area. It operates separately from the Appellate Side, with specialized rules, often handling complex commercial or testamentary cases directly.
                 </p>
@@ -665,8 +665,8 @@
       </div>
       <div
         class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center align-items-center text-center  position-relative">
-        <div class="card shadow mb-2 bg-body rounded" style="width: 22rem;">
-          <div class="card-body">
+        <div class="card shadow mb-2 bg-body rounded" style="width: 22rem;" id="mapCard">
+          <div class="card-body" >
             <h5 class="card-title text-center fs-6 text-success fw-bold"> Navi Mumbai Office direction:</h5>
             <p><iframe
                 src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d15085.583746734783!2d73.07594429999999!3d19.0463218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2s!5e0!3m2!1sen!2sin!4v1761206243717!5m2!1sen!2sin"
@@ -712,9 +712,13 @@
     });
     $(".propWithinfamily").click(function(){alert("You may need to contact through Consultancy Services")});
 
+    $("#multiCollapseExample2").on( function () {
+      $("#mapCard").slideUp();
+    });
+
+   
+   
   </script>
-  
-  
  
 
 </body>
