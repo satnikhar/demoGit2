@@ -49,6 +49,6 @@ function display(result){
 function selectInput(list){
     inputBox.value = list.innerHTML;
     resultsBox.innerHTML = "";
-}
+};
 
 
